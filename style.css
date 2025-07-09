@@ -1,0 +1,112 @@
+body {
+  font-family: 'Consolas', 'Courier New', monospace;
+  background-color: #2e2a2a;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+body.light-mode {
+  background-color: #e8e8e5;
+  color: #212529;
+}
+
+body.light-mode footer,
+body.light-mode footer a {
+  color: #212529 !important;
+}
+
+.timer-btn.active {
+  background-color: #ffc107;
+  color: #000;
+  border-color: #ffc107;
+}
+
+.typing-box {
+  border: 2px dashed #241919;
+  padding: 2rem;
+  border-radius: 10px;
+  min-height: 260px;
+  max-height: 300px;
+  overflow: hidden;
+  cursor: text;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#wordDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 1000px;
+  font-size: 1.4rem;
+  text-align: left;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+#wordDisplay span {
+  display: inline-block;
+  padding: 2px;
+  margin: 1px;
+}
+
+@media (max-width: 768px) {
+  #wordDisplay {
+    font-size: 1.2rem;
+  }
+
+  .typing-box {
+    padding: 1rem;
+    max-height: 280px;
+  }
+}
+
+.correct {
+  color: #000000f5;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.active {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+body.light-mode .active {
+  color: #000000;
+}
+
+#instruction {
+  opacity: 0.6;
+  font-size: 1.3rem;
+}
+
+body.light-mode #instruction {
+  color: #212529 !important;
+}
+
+#hiddenInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}

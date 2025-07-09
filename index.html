@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FastFingers - Typing Game</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark px-4 py-3 d-flex justify-content-between align-items-center">
+    <div class="navbar-brand d-flex align-items-center gap-2 text-white fs-4">
+      <i class="fas fa-keyboard"></i> FastFingers
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <span class="text-white">Set Timer:</span>
+      <button class="btn btn-outline-light btn-sm timer-btn" data-time="15">15s</button>
+      <button class="btn btn-outline-light btn-sm timer-btn active" data-time="30">30s</button>
+      <button class="btn btn-outline-light btn-sm timer-btn" data-time="60">60s</button>
+
+      <!-- Icon Toggle -->
+      <button id="darkModeToggle" class="btn btn-outline-light ms-3" title="Toggle Dark Mode">
+        <i id="darkModeIcon" class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Game Area -->
+  <main class="container text-center py-5">
+    <h2 id="timerDisplay" class="mb-4 fw-bold">30</h2>
+    <button id="startBtn" class="btn btn-secondary mb-4">New Game</button>
+
+    <div id="typingBox" class="typing-box mt-4">
+      <p id="instruction" class="fs-4 text-light">⚡ Press any key to begin typing</p>
+      <div id="wordDisplay" class="text-wrap text-start mx-auto" style="max-width: 700px;"></div>
+      <input type="text" id="hiddenInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-light mt-5 pb-4">
+    <div class="mb-2">
+      <span class="bg-warning text-dark px-2 py-1 rounded fw-bold">ctrl + R</span> - Reset Test
+    </div>
+    <div class="d-flex justify-content-center gap-4 mt-2">
+      <a href="https://www.linkedin.com/in/tanmoykayal" class="text-light text-decoration-none" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/tanmoy-feb" class="text-light text-decoration-none" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:tanmoykayal2005@gmail.com" class="text-light text-decoration-none">
+        <i class="fas fa-envelope"></i> Contact
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
