@@ -1,6 +1,7 @@
 # FastFingers
 
-Live on: https://fastfingers.netlify.app/  *(replace this with your actual Netlify link after deployment)*
+Live Demo: [https://fast-fingers-1.netlify.app](https://fast-fingers-1.netlify.app)
+
 
 ## About the Project
 
